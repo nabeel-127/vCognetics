@@ -1,6 +1,6 @@
 #!/bin/bash
 
-local_repo="$HOME/Workspace"
+local_repo="$HOME/Workspace/Repos/vCognetics"
 remote_repo="git@github.com:nabeelali1207/vCognetics.git"
 
 cd "$local_repo"
