@@ -4,11 +4,13 @@ cpuUsage="CPU Usage: $(top -bn1 | awk '/Cpu/ { print $2}')"
 memUsage="Memory Usage: $(free -m | awk '/Mem/ {print $3}')"
 diskUsage="Disk Usage: $(df -h | awk '$NF=="/"{printf "%d/%dGB (%s)\n", $3,$2,$5}')"
 
+
 echo $cpuUsage%
 echo $memUsage MB
 echo $diskUsage
 
-
+stats=$(ifconfig | awk '/RX packets/ {print "- Received packets:", $5; print "- Transmitted packets:", $9; print "- Received bytes:", $6; print "- Transmitted bytes:", $10}')
+echo "$stats"
 
 
 
