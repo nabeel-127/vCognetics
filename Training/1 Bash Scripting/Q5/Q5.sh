@@ -11,4 +11,4 @@ cd "$local_repo"
 git add .
 git commit -m "Updated changes"
 
-git push "$remote_repo" origin master
+git push "$remote_repo" main
