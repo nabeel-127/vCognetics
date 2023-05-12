@@ -1,6 +1,12 @@
 #!/bin/bash
 
 FileIn="bash_scripting_q6.csv"
+
+if [ $# -eq 1 ]
+then
+    FileIn=$1
+fi
+
 if [ ! -r "$FileIn" ]; then
     echo "Input file does not exist or is not readable"
     exit 1

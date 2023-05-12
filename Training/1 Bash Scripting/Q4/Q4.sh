@@ -2,6 +2,14 @@
 
 LogFile="LogFile.log"
 
+if [ $# -eq 1 ]
+then
+    LogFile=$1
+else
+    echo "Usage: $0 <LogFile>"
+    exit 1
+fi
+
 # tail -n0 -f $LogFile | head -n10 | while read line; do
 # 	if [[ "$line" == *"error"* || "$line" == *"Error"* ]]; then
 # 		echo "Error message detected in log file: $line"
@@ -18,12 +26,12 @@ do
 	if [[ $currentCount -gt $previousCount ]]
 	then
 		newLines=$(($currentCount - $previousCount))
-		tail -n $newLines $LogFile | grep -i "error" > /dev/null
+		tail -n $newLines $LogFile | grep -i "error"
         if [ $? -eq 0 ]
         then
             echo "Error found in log file!"
         fi
-		tail -n $newLines $LogFile | grep -i "warning" > /dev/null
+		tail -n $newLines $LogFile | grep -i "warning"
         if [ $? -eq 0 ]
         then
             echo "Warning found in log file!"
@@ -33,7 +41,7 @@ do
 	sleep 1
 done
 
-
+# multiple errors, bugs; /dev/null; /dev terminal comm; 
 
 
 

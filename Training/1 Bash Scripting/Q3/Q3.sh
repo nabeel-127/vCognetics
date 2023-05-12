@@ -15,7 +15,7 @@ echo "$stats"
 
 
 
-
+# display port info, and ip and name, CPU core data and related info, bracket issue *, awk, %d etc; sed vs awk vs grep;
 
 
 

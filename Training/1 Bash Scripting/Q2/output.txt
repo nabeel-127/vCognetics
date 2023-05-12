@@ -1,2 +1,0 @@
-TextFiles/file2.txt:1:keyword
-TextFiles/file5.txt:1:hello keyword world
