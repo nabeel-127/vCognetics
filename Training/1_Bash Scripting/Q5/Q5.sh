@@ -12,3 +12,5 @@ git add .
 git commit -m "Updated changes"
 
 git push "$remote_repo" main
+
+# user entered commit message; git add .; push to branch
