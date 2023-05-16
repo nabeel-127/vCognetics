@@ -24,18 +24,9 @@ warningFile="warnings.log"
 echo "Full Name,Phone Number,Email Domain" > $formattedFile
 
 while IFS=, read -r firstName lastName email phoneNumber; do
-  
-    # echo "First Name:$first_name"
-    # echo "Last Name:$last_name"
-    # echo "Email:$email"
-    # echo "Phone Number:$phone_number"
-	
-	# phoneNumber=${phoneNumber// /}
-	# phoneNumber=${phoneNumber//-/}
 
 	if [[ ! "$phoneNumber" =~ ^[0-9]{3}\ [0-9]{3}-[0-9]{4}$ ]]; then
 		echo "Invalid phone number: $phoneNumber" >> "$warningFile"
-		# echo " " >> "$formattedFile"
     	continue
 	fi
 
@@ -53,3 +44,5 @@ while IFS=, read -r firstName lastName email phoneNumber; do
 done < "$FileIn"
 
 sort -t, -k1 formatted.csv -o formatted.csv
+
+# names in sorting; != issue; regular expression; sort
