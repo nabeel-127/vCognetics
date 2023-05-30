@@ -1,14 +1,20 @@
 import asyncio
 import websockets
+import json
+import time
 
 async def handler(websocket):
-    while True:
         message = await websocket.recv()
-        print(message)
+        await websocket.send(str(time.time()) + " " + message)
+        data = json.loads(message)
+        print(data)
 
 async def main():
     async with websockets.serve(handler, "", 8001):
-        await asyncio.Future()  # run forever
+        await asyncio.Future()
 
 if __name__ == "__main__":
-    asyncio.run(main())
+	try:
+		asyncio.run(main())
+	except KeyboardInterrupt:
+		pass
