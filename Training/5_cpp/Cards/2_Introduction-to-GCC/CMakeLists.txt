@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.20)
+project(HelloWorld)
+add_subdirectory(libraries)
+add_executable(hello_world hello_world.cpp)
+target_include_directories(hello_world PRIVATE ${CMAKE_SOURCE_DIR}/libraries)
+target_link_libraries(hello_world PRIVATE my_sum)
+target_link_libraries(hello_world PRIVATE calculator)
