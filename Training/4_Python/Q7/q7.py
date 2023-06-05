@@ -24,8 +24,9 @@ def synchronous():
 
 
 async def find_divisibles_async(end, divisor):
-	divisibles = await asyncio.to_thread(find_divisibles, end, divisor)
-	print(divisibles)
+	loop = asyncio.get_event_loop()
+	divisibles = await loop.run_in_executor(None, find_divisibles, end, divisor)
+	# print(divisibles)
 	return divisibles
 
 async def asynchronous():
@@ -41,7 +42,7 @@ async def asynchronous():
     for i, (end, divisor) in enumerate(ranges):
         divisibles = completed_tasks[i]
         print(f"Range: 1-{end}  Divisor: {divisor}")
-        print("Divisibles:", divisibles)
+        # print("Divisibles:", divisibles)
         print()
 
 
@@ -64,7 +65,7 @@ if __name__ == "__main__":
 	
 	logging.info("Entering asynchronous function . . . ")
 	start_time = time.time()
-	asynchronous()
+	asyncio.run(asynchronous())
 	end_time = time.time()
 	asynchronous_time = end_time - start_time
 	logging.info("Time taken for asynchronous: %f seconds", asynchronous_time)

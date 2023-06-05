@@ -12,7 +12,7 @@ with open("my_dummy_file.txt", 'r') as file:
 	data = [int(x) for x in data_in.split(',')]
 
 data_square = square(data)
-data_cube = square(data)
+data_cube = cube(data)
 
 
 plt.plot(data_square, data_cube, 'o')
