@@ -1,0 +1,26 @@
+INFO:websockets.server:server listening on 0.0.0.0:8001
+INFO:websockets.server:server listening on [::]:8001
+INFO:websockets.server:connection open
+INFO:root:{"jsonrpc": "2.0", "method": "message-1", "timestamp": 1686659016.9421432}
+INFO:websockets.server:connection closed
+INFO:websockets.server:connection open
+INFO:root:{"jsonrpc": "2.0", "method": "message-2", "timestamp": 1686659017.9484391}
+INFO:websockets.server:connection closed
+INFO:websockets.server:connection open
+INFO:root:{"jsonrpc": "2.0", "method": "message-3", "timestamp": 1686659018.9553514}
+INFO:websockets.server:connection closed
+INFO:websockets.server:connection open
+INFO:root:{"jsonrpc": "2.0", "method": "message-4", "timestamp": 1686659019.9626875}
+INFO:websockets.server:connection closed
+INFO:websockets.server:connection open
+INFO:root:{"jsonrpc": "2.0", "method": "message-1", "timestamp": 1686659124.9371202}
+INFO:websockets.server:connection closed
+INFO:websockets.server:connection open
+INFO:root:{"jsonrpc": "2.0", "method": "message-2", "timestamp": 1686659125.9435682}
+INFO:websockets.server:connection closed
+INFO:websockets.server:connection open
+INFO:root:{"jsonrpc": "2.0", "method": "message-3", "timestamp": 1686659126.9506269}
+INFO:websockets.server:connection closed
+INFO:websockets.server:connection open
+INFO:root:{"jsonrpc": "2.0", "method": "message-4", "timestamp": 1686659127.9576006}
+INFO:websockets.server:connection closed

@@ -1,0 +1,8 @@
+INFO:root:{"jsonrpc": "2.0", "method": "message-1"}
+INFO:root:{"jsonrpc": "2.0", "method": "message-1", "timestamp": 1686659124.9371202}
+INFO:root:{"jsonrpc": "2.0", "method": "message-2"}
+INFO:root:{"jsonrpc": "2.0", "method": "message-2", "timestamp": 1686659125.9435682}
+INFO:root:{"jsonrpc": "2.0", "method": "message-3"}
+INFO:root:{"jsonrpc": "2.0", "method": "message-3", "timestamp": 1686659126.9506269}
+INFO:root:{"jsonrpc": "2.0", "method": "message-4"}
+INFO:root:{"jsonrpc": "2.0", "method": "message-4", "timestamp": 1686659127.9576006}

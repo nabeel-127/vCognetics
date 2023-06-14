@@ -13,10 +13,7 @@ with open('/proc/cpuinfo', 'r') as file:
 		if "model name" in line:
 			print(line.split(':')[1].strip())
 			break
-	# print("L1i cache size:", cpuinfo.split('cache size')[1].split('\n')[0].strip())
-	# print("L1d cache size:", cpuinfo.split('cache size')[2].split('\n')[0].strip())
-	# print("L2 cache size:", cpuinfo.split('cache size')[3].split('\n')[0].strip())
-	# print("L3 cache size:", cpuinfo.split('cache size')[4].split('\n')[0].strip())
+
 	output = subprocess.check_output("lscpu", shell=True).decode().splitlines()
 	cache_sizes = {}
 	for line in output:
@@ -37,6 +34,6 @@ print("CPU current frequency: " + str(int(psutil.cpu_freq().current)) + "MHz")
 
 
 
-print("Distributor ID:", subprocess.check_output("lsb_release -si", shell=True).decode().strip())
+print("Distributor ID:", subprocess.check_output(["lsb_release", "-si"]).decode().strip())
 print("Distributor Description:", subprocess.check_output("lsb_release -sd", shell=True).decode().strip())
 print("Distributor Codename:", subprocess.check_output("lsb_release -sc", shell=True).decode().strip())

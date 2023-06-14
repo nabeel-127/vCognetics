@@ -10,7 +10,7 @@ if len(sys.argv) != 2:
 file_path = os.getcwd() + sys.argv[1]
 
 with open(file_path, 'r') as file:
-	data = numpy.loadtxt(file_path, delimiter=',', usecols=(0, 1, 2))
+	data = numpy.loadtxt(file_path, delimiter=',', usecols=(0))
 	# data = numpy.genfromtxt(file_path, delimiter=',')
 
 mean = numpy.mean(data)

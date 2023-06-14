@@ -2,6 +2,7 @@ import asyncio
 import websockets
 import json
 import os
+import logging
 
 myMessage = [
   { "jsonrpc": "2.0", "method": "message-1" },
@@ -17,26 +18,40 @@ myMessage = [
 ]
 myMessage = "hola"
 
+messages = []
+
+length = 0
+
 def parse_json():
 	with open(os.getcwd() + "/client_messages.json") as file:
 		data = json.load(file)
-	data = data[:10]
+	# data = data[:10]
 	return data
 
 async def main():
+	data = parse_json()
+	i = 0
 	while True:
 		async with websockets.connect('ws://localhost:8001') as websocket:
-			message = json.dumps(parse_json())
-			# message = input("Enter a message: ")
+			message = json.dumps(data[i])
 			await websocket.send(message)
-			print("Message sent.")
-			response =  await websocket.recv()
-			print(f"Message received.\n{response}")
+			print(f"Message sent:\n{message}")
+			logging.info(message)
+			message =  await websocket.recv()
+			print(f"Message received:\n{message}\n")
+			logging.info(message)
+			messages.append(json.loads(message))
 		await asyncio.sleep(1)
-		break
-
+		# break
+		if i < 50: # len(data):
+			i += 1
+		else:
+			with open("output_messages_client.json", 'w') as file:
+				json.dump(messages, file, indent=4)
+			break
 
 if __name__ == "__main__":
+	logging.basicConfig(filename='output_messages_client.log', level=logging.INFO, filemode='w')
 	try:
 		asyncio.run(main())
 	except KeyboardInterrupt:

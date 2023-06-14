@@ -1,0 +1,3 @@
+/home/nabeel/Workspace/Repos/vCognetics/Training/5_cpp/Cards/8_Unit-Testing/build/CMakeFiles/runTests.dir
+/home/nabeel/Workspace/Repos/vCognetics/Training/5_cpp/Cards/8_Unit-Testing/build/CMakeFiles/edit_cache.dir
+/home/nabeel/Workspace/Repos/vCognetics/Training/5_cpp/Cards/8_Unit-Testing/build/CMakeFiles/rebuild_cache.dir
