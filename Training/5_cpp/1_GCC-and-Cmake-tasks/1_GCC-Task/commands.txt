@@ -1,0 +1,6 @@
+g++ -c -fpic mymath.cpp -o mymath.o
+g++ -shared -o libmymath.so mymath.o
+g++ main.cpp -o main -L. -Wl,-rpath,. -lmymath
+
+g++ -c -fPIC -O2 mymath.cpp -o mymath.o
+
