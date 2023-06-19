@@ -1,0 +1,11 @@
+# cmake_minimum_required(VERSION 3.0)
+# project(MyMathLibrary)
+# set(SOURCES mymath.cpp)
+# add_library(mymath SHARED ${SOURCES})
+
+cmake_minimum_required(VERSION 3.0)
+project(MainProgram)
+set(SOURCES main.cpp)
+add_executable(main ${SOURCES})
+target_link_libraries(main mymath)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/build)

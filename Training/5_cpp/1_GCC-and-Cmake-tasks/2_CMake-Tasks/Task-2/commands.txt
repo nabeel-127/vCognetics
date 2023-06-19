@@ -1,0 +1,3 @@
+git init
+git submodule add https://github.com/boostorg/boost external/boost
+git commit -m "message"
