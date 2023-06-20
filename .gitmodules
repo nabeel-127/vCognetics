@@ -1,0 +1,3 @@
+[submodule "Training/5_cpp/1_GCC-and-Cmake-tasks/2_CMake-Tasks/Task-2/external/boost"]
+	path = Training/5_cpp/1_GCC-and-Cmake-tasks/2_CMake-Tasks/Task-2/external/boost
+	url = https://github.com/boostorg/boost.git
