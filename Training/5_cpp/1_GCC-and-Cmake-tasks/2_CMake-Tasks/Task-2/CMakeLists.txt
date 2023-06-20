@@ -17,7 +17,6 @@ execute_process(
 set(BOOST_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/external/boost)
 set(BOOST_INCLUDEDIR ${BOOST_ROOT})
 set(BOOST_LIBRARYDIR ${BOOST_ROOT}/stage/lib)
-
 set(BOOST_COMPONENTS
     date_time
     filesystem
