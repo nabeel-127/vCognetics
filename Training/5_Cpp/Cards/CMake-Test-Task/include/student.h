@@ -1,6 +1,9 @@
 #ifndef _STUDENT_H
 #define _STUDENT_H
 
+#include <string>
+#include <map>
+
 class student
 {
 private:
