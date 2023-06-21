@@ -26,7 +26,6 @@ void student::print_all_marks()
 		std::cout << "Subject: " << pair.first << ", Marks: " << pair.second << std::endl;
 	}
 }
-
 void student::set_roll_no(std::string _roll_no)
 {
 	current_student.roll_no = _roll_no;

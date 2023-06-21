@@ -23,7 +23,6 @@ public:
 	void set_subject_marks(std::string subject, int marks);
 	int get_subject_marks(std::string subject);
 	void print_all_marks();
-
 	void set_roll_no(std::string _roll_no);
 	std::string get_roll_no();
 	void set_age(float _age);
