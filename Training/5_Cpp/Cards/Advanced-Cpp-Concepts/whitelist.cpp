@@ -3,6 +3,9 @@
 
 #include "whitelist.hpp"
 
+whitelist::whitelist(student &_student_data_list)
+{
+}
 void whitelist::add_to_whitelist(std::string, student)
 {
 }

@@ -12,6 +12,7 @@ private:
 	std::vector<student> student_data_list;
 
 public:
+	whitelist(student &_student_data_list);
 	void add_to_whitelist(std::string, student);
 	bool is_student_present(std::string);
 	student *get_student_data(std::string);
