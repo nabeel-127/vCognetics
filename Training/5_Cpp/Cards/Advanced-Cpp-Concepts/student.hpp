@@ -1,5 +1,5 @@
-#ifndef STUDENT_H
-#define STUDENT_H
+#ifndef STUDENT_HPP
+#define STUDENT_HPP
 
 #include <string>
 #include <map>
@@ -17,9 +17,6 @@ private:
 	std::map<std::string, int> result;
 
 public:
-	student();
-	~student();
-
 	void set_subject_marks(std::string subject, int marks);
 	int get_subject_marks(std::string subject);
 	void print_all_marks();
