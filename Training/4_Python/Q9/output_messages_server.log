@@ -153,3 +153,5 @@ INFO:websockets.server:connection closed
 INFO:websockets.server:connection open
 INFO:root:{"jsonrpc": "2.0", "method": "message-51", "timestamp": 1687416175.6514978}
 INFO:websockets.server:connection closed
+INFO:websockets.server:server closing
+INFO:websockets.server:server closed
