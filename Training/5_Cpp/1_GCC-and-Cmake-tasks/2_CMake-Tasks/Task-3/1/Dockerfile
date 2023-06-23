@@ -1,3 +1,4 @@
 FROM ubuntu
-COPY hello-world /usr/local/bin
+WORKDIR /app
+COPY . /app
 CMD hello-world

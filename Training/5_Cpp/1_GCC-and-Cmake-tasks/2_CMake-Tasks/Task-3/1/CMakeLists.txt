@@ -7,6 +7,8 @@ set(IMAGE_NAME "cmake-docker-example")
 set(DOCKERFILE ${CMAKE_CURRENT_LIST_DIR}/Dockerfile)
 set(_IMAGE_HASH ${CMAKE_CURRENT_BINARY_DIR}/${IMAGE_NAME}.hash)
 set(_BUILD_CONTEXT context)
+set(DOCKERHUB_REPO "nabeelali1207/vcognetics")  # Your Docker Hub repository name
+
 add_custom_command(
     OUTPUT ${_IMAGE_HASH}
     COMMENT "Building docker image \"${IMAGE_NAME}\""
@@ -21,6 +23,9 @@ add_custom_command(
         ${_BUILD_CONTEXT}
 
     COMMAND ${CMAKE_COMMAND} -E remove_directory ${_BUILD_CONTEXT}
+
+    COMMAND ${DOCKER_CMD} tag ${IMAGE_NAME} ${DOCKERHUB_REPO}:${IMAGE_NAME}
+    COMMAND ${DOCKER_CMD} push ${DOCKERHUB_REPO}:${IMAGE_NAME}
 
     COMMAND ${DOCKER_CMD} images --no-trunc ${IMAGE_NAME} > ${_IMAGE_HASH}
 
