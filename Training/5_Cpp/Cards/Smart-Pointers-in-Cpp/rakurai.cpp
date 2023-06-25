@@ -35,12 +35,19 @@ std::shared_ptr<student> database::get_student_reference_1(std::string _student_
 
 std::unique_ptr<student> database::get_student_reference_2(std::string _student_name)
 {
-	std::shared_ptr<student> shared_student = get_student_reference_1(_student_name);
-	// std::cout << shared_student << std::endl;
-	if (shared_student)
+	// std::shared_ptr<student> shared_student = get_student_reference_1(_student_name);
+	// if (shared_student)
+	// {
+	// 	std::unique_ptr<student> unique_student = std::make_unique<student>(*shared_student);
+	// 	return unique_student;
+	// }
+	for (std::vector<std::shared_ptr<student>>::iterator it = student_list.begin(); it != student_list.end(); ++it)
 	{
-		std::unique_ptr<student> unique_student = std::make_unique<student>(*shared_student);
-		return unique_student;
+		if ((*it)->get_student_name() == _student_name)
+		{
+			std::unique_ptr<student> unique_student = std::make_unique<student>(**it);
+			return unique_student;
+		}
 	}
 	return nullptr;
 }
