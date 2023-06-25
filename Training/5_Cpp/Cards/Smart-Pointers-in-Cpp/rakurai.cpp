@@ -21,11 +21,10 @@ database::database()
 	}
 }
 
-std::shared_ptr<student> database::get_student_reference(std::string _student_name)
+std::shared_ptr<student> database::get_student_reference_1(std::string _student_name)
 {
 	for (auto it = student_list.begin(); it != student_list.end(); ++it)
 	{
-		std::cout << (*it)->get_student_name() << std::endl;
 		if ((*it)->get_student_name() == _student_name)
 		{
 			return *it;
@@ -34,9 +33,10 @@ std::shared_ptr<student> database::get_student_reference(std::string _student_na
 	return nullptr;
 }
 
-std::unique_ptr<student> database::get_student_reference_unique(std::string _student_name)
+std::unique_ptr<student> database::get_student_reference_2(std::string _student_name)
 {
-	std::shared_ptr<student> shared_student = get_student_reference(_student_name);
+	std::shared_ptr<student> shared_student = get_student_reference_1(_student_name);
+	// std::cout << shared_student << std::endl;
 	if (shared_student)
 	{
 		std::unique_ptr<student> unique_student = std::make_unique<student>(*shared_student);

@@ -5,13 +5,13 @@
 int main()
 {
 	rakurai::database db;
-	std::shared_ptr<student> student1 = db.get_student_reference("BEE173059");
-	if (student1)
+	std::shared_ptr<student> my_student = db.get_student_reference_2("Nabeel");
+	if (my_student)
 	{
 		std::cout << "Student Found!" << std::endl;
-		std::cout << "Roll No: " << student1->get_roll_no() << std::endl;
-		std::cout << "Age: " << student1->get_age() << std::endl;
-		std::cout << "CGPA: " << student1->get_cgpa() << std::endl;
+		std::cout << "Roll No: " << my_student->get_roll_no() << std::endl;
+		std::cout << "Age: " << my_student->get_age() << std::endl;
+		std::cout << "CGPA: " << my_student->get_cgpa() << std::endl;
 	}
 	else
 	{
