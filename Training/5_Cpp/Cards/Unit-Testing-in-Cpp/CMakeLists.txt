@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_subdirectory(googletest)
 
 # Add the whattotest.cpp and gtest.cpp files to your test executable
-add_executable(runTests gtest.cpp whattotest.cpp)
+add_executable(runTests gtest.cpp whattotest.cpp whitelist.cpp student.cpp)
 
 # Link the GoogleTest library to your test executable
 target_link_libraries(runTests gtest gtest_main)
