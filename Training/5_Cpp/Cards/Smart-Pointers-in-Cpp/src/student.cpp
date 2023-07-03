@@ -2,7 +2,7 @@
 #define STUDENT_CPP
 
 #include <iostream>
-#include "student.hpp"
+#include "../include/student.h"
 
 void student::set_subject_marks(std::string _subject, int _marks)
 {

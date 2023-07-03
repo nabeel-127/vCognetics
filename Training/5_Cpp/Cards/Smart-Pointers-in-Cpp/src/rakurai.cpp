@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "rakurai.hpp"
+#include "../include/rakurai.h"
 
 using namespace rakurai;
 
