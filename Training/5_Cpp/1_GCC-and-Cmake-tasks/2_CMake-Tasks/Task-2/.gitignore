@@ -1,3 +1,5 @@
 /.git
 /.gitmodules
-/build
+/build/*
+!/build/main
+!/build/main.exe
