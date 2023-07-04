@@ -1,6 +1,11 @@
-g++ -c -fpic mymath.cpp -o mymath.o
-g++ -shared -o libmymath.so mymath.o
-g++ main.cpp -o main -L. -Wl,-rpath,. -lmymath
+Dynamic:
+	g++ -c -fpic mymath.cpp -o mymath.o
+	g++ -shared -o libmymath.so mymath.o
+	g++ main.cpp -o main -L. -Wl,-rpath,. -lmymath
+	Optimization:
+		g++ -c -fPIC -O2 mymath.cpp -o mymath.o
 
-g++ -c -fPIC -O2 mymath.cpp -o mymath.o
-
+Static:
+	g++ -c mymath.cpp -o mymath.o
+	ar rvs libmymath.a mymath.o OR g++ -static -o libmymath.a mymath.o
+	g++ main.cpp -o main -L. -lmymath
