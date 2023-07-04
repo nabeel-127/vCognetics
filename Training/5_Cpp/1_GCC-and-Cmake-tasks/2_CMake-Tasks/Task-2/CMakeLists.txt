@@ -9,8 +9,8 @@ project(MyProject)
 
 find_package(Git REQUIRED)
 execute_process(
-	COMMAND ${GIT_EXECUTABLE} submodule update --init --recursive
-	WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/external/boost
+	COMMAND ${GIT_EXECUTABLE} submodule update --init external/boost
+	WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 set(BOOST_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/external/boost)
