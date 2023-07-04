@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Add the googletest submodule
-add_subdirectory(googletest)
+add_subdirectory(external/googletest)
 
 # Add the whattotest.cpp and gtest.cpp files to your test executable
 add_executable(runTests gtest.cpp whattotest.cpp whitelist.cpp student.cpp)
