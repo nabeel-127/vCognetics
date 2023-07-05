@@ -44,7 +44,7 @@ int main()
 			std::cout << "Student " << i << " Doesn't exist" << std::endl;
 	}
 
-	temp = whitelisted.get_student_data("Haris");
+	temp = whitelisted.get_student_data("incorrectname");
 	if (temp)
 	{
 		std::cout << "Student Roll #: " << temp->get_roll_no() << std::endl;
