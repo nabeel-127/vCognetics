@@ -43,25 +43,6 @@ int main()
 		else
 			std::cout << "Student " << i << " Doesn't exist" << std::endl;
 	}
-	temp = whitelisted.get_student_data("Nabeel");
-	if (temp)
-	{
-		std::cout << "Student Roll #: " << temp->get_roll_no() << std::endl;
-		temp->print_all_marks();
-		temp = NULL;
-	}
-	else
-		std::cout << "Student 1 Doesn't exist" << std::endl;
-
-	temp = whitelisted.get_student_data("Ali");
-	if (temp)
-	{
-		std::cout << "Student Roll #: " << temp->get_roll_no() << std::endl;
-		temp->print_all_marks();
-		temp = NULL;
-	}
-	else
-		std::cout << "Student 2 Doesn't exist" << std::endl;
 
 	temp = whitelisted.get_student_data("Haris");
 	if (temp)
