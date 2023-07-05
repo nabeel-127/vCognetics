@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.0)
 project(Advanced-Cpp-Concepts)
 
 # message("C++ Compiler ID: ${CMAKE_CXX_COMPILER_ID}")
