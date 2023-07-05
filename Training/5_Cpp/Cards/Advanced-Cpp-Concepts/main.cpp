@@ -26,7 +26,7 @@ int main()
 
 	for (int i = 0; i < 16; i++)
 	{
-		std::cout << "Is Student Present: " << whitelisted.is_student_present(student_name[i]) << std::endl;
+		std::cout << "Is Student(" << i << ") Present: " << whitelisted.is_student_present(student_name[i]) << std::endl;
 	}
 	std::cout << "Is Student Present: " << whitelisted.is_student_present("incorrectname") << std::endl;
 
