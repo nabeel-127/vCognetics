@@ -2,7 +2,7 @@
 
 #include <vector>
 #include <memory>
-#include "../include/student.h"
+#include "student.h"
 
 namespace rakurai
 {
