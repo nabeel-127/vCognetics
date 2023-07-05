@@ -2,8 +2,11 @@ cmake_minimum_required(VERSION 3.12)
 
 project(MyBenchmark)
 
+add_compile_options(-Wno-error)
+
 add_subdirectory(external/benchmark)
 
-add_executable(benchmark_test benchmark_test.cpp)
+# set_target_properties(benchmark PROPERTIES CXX_FLAGS "-Wno-error")
+add_executable(my_benchmark_test main.cpp)
 
-target_link_libraries(benchmark_test benchmark::benchmark)
+target_link_libraries(my_benchmark_test benchmark::benchmark)
