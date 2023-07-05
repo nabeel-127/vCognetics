@@ -5,7 +5,7 @@
 int main()
 {
 	student my_students[20], *temp = NULL;
-	whitelist whitelisted(3);
+	whitelist whitelisted(16);
 	std::string roll_no[20] = {"BEE173059", "BEE173060", "BEE173061", "BEE173062", "BEE173063", "BEE173064", "BEE173065", "BEE173066", "BEE173067", "BEE173069", "BEE173070", "BEE173071", "BEE173072", "BEE173073", "BEE173074", "BEE173075", "BEE173076", "BEE173077", "BEE173078", "BEE173079"};
 	std::string student_name[16] = {"Nabeel", "Ahmed", "Ali", "Abdullah", "Usman", "Omar", "Ibrahim", "Bilal", "Hamza", "Yusuf", "Tariq", "Zain", "Suleman", "Rashid", "Farhan", "Khalid"};
 	for (int i = 0; i < 20; i++)
@@ -30,18 +30,48 @@ int main()
 	}
 	std::cout << "Is Student Present: " << whitelisted.is_student_present("incorrectname") << std::endl;
 
+	std::cout << std::endl;
+	for (int i = 0; i < 16; i++)
+	{
+		temp = whitelisted.get_student_data(student_name[i]);
+		if (temp)
+		{
+			std::cout << "Student Roll #: " << temp->get_roll_no() << std::endl;
+			temp->print_all_marks();
+			temp = NULL;
+		}
+		else
+			std::cout << "Student " << i << " Doesn't exist" << std::endl;
+	}
 	temp = whitelisted.get_student_data("Nabeel");
-	std::cout << "Student Roll #: " << temp->get_roll_no() << std::endl;
-	temp->print_all_marks();
-	temp = NULL;
-	temp = whitelisted.get_student_data("Ali");
-	std::cout << "Student Roll #: " << temp->get_roll_no() << std::endl;
-	temp->print_all_marks();
-	temp = NULL;
-	temp = whitelisted.get_student_data("Haris");
-	std::cout << "Student Roll #: " << temp->get_roll_no() << std::endl;
-	temp->print_all_marks();
+	if (temp)
+	{
+		std::cout << "Student Roll #: " << temp->get_roll_no() << std::endl;
+		temp->print_all_marks();
+		temp = NULL;
+	}
+	else
+		std::cout << "Student 1 Doesn't exist" << std::endl;
 
-	system("pause");
+	temp = whitelisted.get_student_data("Ali");
+	if (temp)
+	{
+		std::cout << "Student Roll #: " << temp->get_roll_no() << std::endl;
+		temp->print_all_marks();
+		temp = NULL;
+	}
+	else
+		std::cout << "Student 2 Doesn't exist" << std::endl;
+
+	temp = whitelisted.get_student_data("Haris");
+	if (temp)
+	{
+		std::cout << "Student Roll #: " << temp->get_roll_no() << std::endl;
+		temp->print_all_marks();
+	}
+	else
+		std::cout << "Student 3 Doesn't exist" << std::endl;
+
+	// system("pause");
 	return 0;
 }
