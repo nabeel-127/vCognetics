@@ -1,6 +1,6 @@
 #include "whattotest.h"
-#include "whitelist.hpp"
-#include "student.hpp"
+#include "whitelist.h"
+#include "student.h"
 #include <gtest/gtest.h>
 
 TEST(SquareRootTest, PositiveNos)
@@ -19,28 +19,31 @@ TEST(SquareRootTest, NegativeNos)
 
 TEST(MainTest, maintest)
 {
-	student my_students[2], *temp;
-	whitelist whitelisted;
-	my_students[0].set_roll_no("BEE173059");
-	my_students[0].set_age(21);
-	my_students[0].set_cgpa(3.5);
-	my_students[0].set_subject_marks("mathematics", 50);
-	my_students[0].set_subject_marks("physics", 60);
-	my_students[0].set_subject_marks("science", 70);
-	my_students[0].set_subject_marks("history", 80);
+	student my_students[20], *temp = NULL;
+	whitelist whitelisted(16);
+	std::string roll_no[20] = {"BEE173059", "BEE173060", "BEE173061", "BEE173062", "BEE173063", "BEE173064", "BEE173065", "BEE173066", "BEE173067", "BEE173069", "BEE173070", "BEE173071", "BEE173072", "BEE173073", "BEE173074", "BEE173075", "BEE173076", "BEE173077", "BEE173078", "BEE173079"};
+	std::string student_name[16] = {"Nabeel", "Ahmed", "Ali", "Abdullah", "Usman", "Omar", "Ibrahim", "Bilal", "Hamza", "Yusuf", "Tariq", "Zain", "Suleman", "Rashid", "Farhan", "Khalid"};
+	for (int i = 0; i < 20; i++)
+	{
+		my_students[i].set_roll_no(roll_no[i]);
+		my_students[i].set_age(21 + i);
+		my_students[i].set_cgpa(3.5 + (float(i) / 10));
+		my_students[i].set_subject_marks("mathematics", 50 + i);
+		my_students[i].set_subject_marks("physics", 60 + i);
+		my_students[i].set_subject_marks("science", 70 + i);
+		my_students[i].set_subject_marks("history", 80 + i);
+	}
 
-	my_students[1].set_roll_no("BEE173060");
-	my_students[1].set_age(21);
-	my_students[1].set_cgpa(3.5);
-	my_students[1].set_subject_marks("mathematics", 55);
-	my_students[1].set_subject_marks("physics", 65);
-	my_students[1].set_subject_marks("science", 75);
-	my_students[1].set_subject_marks("history", 85);
-
-	whitelisted.add_to_whitelist("Nabeel", my_students[0]);
-	whitelisted.add_to_whitelist("Ali", my_students[1]);
+	for (int i = 0; i < 16; i++)
+	{
+		whitelisted.add_to_whitelist(student_name[i], my_students[i]);
+	}
 
 	ASSERT_EQ(1, whitelisted.is_student_present("Nabeel"));
+	ASSERT_EQ(0, whitelisted.is_student_present("abc"));
+
+	ASSERT_EQ("BEE173059", my_students[0].get_roll_no());
+	ASSERT_EQ("BEE173060", my_students[1].get_roll_no());
 
 	// temp = whitelisted.get_student_data("Ali");
 	// temp->print_all_marks();

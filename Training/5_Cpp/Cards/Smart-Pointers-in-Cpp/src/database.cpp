@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-#include "../include/rakurai.h"
+#include "database.h"
 
-using namespace rakurai;
+using namespace rakurai::training;
 
 database::database()
 {

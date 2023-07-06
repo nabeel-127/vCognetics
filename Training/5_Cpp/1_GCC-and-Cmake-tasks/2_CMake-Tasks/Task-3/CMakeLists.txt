@@ -17,10 +17,7 @@ add_custom_command(
 	COMMAND ${CMAKE_COMMAND} -E make_directory ${_BUILD_CONTEXT}
 	COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:hello-world> ${_BUILD_CONTEXT}
 
-	COMMAND ${DOCKER_CMD} build
-	--tag ${IMAGE_NAME}
-	--file ${DOCKERFILE}
-	${_BUILD_CONTEXT}
+	COMMAND ${DOCKER_CMD} build --tag ${IMAGE_NAME} --file ${DOCKERFILE} ${_BUILD_CONTEXT}
 
 	COMMAND ${CMAKE_COMMAND} -E remove_directory ${_BUILD_CONTEXT}
 

@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../include/student.h"
-#include "../include/rakurai.h"
+#include "student.h"
+#include "database.h"
 
 void print_student_record(std::unique_ptr<student> &my_student)
 {
@@ -27,7 +27,7 @@ void print_student_record(std::shared_ptr<student> &my_student)
 
 int main()
 {
-	rakurai::database db;
+	rakurai::training::database db;
 	std::shared_ptr<student> my_student1 = db.get_student_reference_1("Ali");
 	std::shared_ptr<student> my_student2 = db.get_student_reference_1("Nabeel");
 	std::unique_ptr<student> my_student3 = db.get_student_reference_2("Ahmed");

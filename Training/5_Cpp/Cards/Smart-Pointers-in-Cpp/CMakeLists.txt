@@ -5,7 +5,7 @@ project(Advanced-Cpp-Concepts)
 # set(CMAKE_CXX_COMPILER "g++")
 include_directories(include)
 
-set(SOURCES src/rakurai.cpp src/student.cpp)
+set(SOURCES src/database.cpp src/student.cpp)
 
 add_executable(main app/main.cpp ${SOURCES})
 

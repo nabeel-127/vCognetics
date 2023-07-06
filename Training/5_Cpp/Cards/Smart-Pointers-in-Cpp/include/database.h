@@ -4,7 +4,7 @@
 #include <memory>
 #include "student.h"
 
-namespace rakurai
+namespace rakurai::training
 {
 	class database
 	{
