@@ -44,12 +44,12 @@ uint64_t sum_of_list_squared(int num_entries)
 
 void MyVectorMain(benchmark::State &state)
 {
-	uint64_t sumA, sumB;
+	uint64_t sum;
 	for (auto temp : state)
 	{
 		for (int i = 0; i < 2000000; ++i)
 		{
-			sumA = sum_of_vector_squared(100);
+			sum = sum_of_vector_squared(100);
 		}
 	}
 }
@@ -57,12 +57,12 @@ BENCHMARK(MyVectorMain)->Unit(benchmark::kMillisecond);
 
 void MyListMain(benchmark::State &state)
 {
-	uint64_t sumA, sumB;
+	uint64_t sum;
 	for (auto temp : state)
 	{
 		for (int i = 0; i < 2000000; ++i)
 		{
-			sumB = sum_of_list_squared(100);
+			sum = sum_of_list_squared(100);
 		}
 	}
 }
