@@ -19,13 +19,14 @@ ExternalProject_Add(
 	GIT_REPOSITORY https://github.com/boostorg/boost.git
 	GIT_TAG "boost-1.76.0"
 	GIT_SUBMODULES
-
-	# PREFIX "${CMAKE_CURRENT_BINARY_DIR}/boost"
+	PREFIX "${CMAKE_CURRENT_BINARY_DIR}/boost"
 	PREFIX "${CMAKE_CURRENT_SOURCE_DIR}/boost"
 	UPDATE_COMMAND ""
 	INSTALL_COMMAND ""
 	CONFIGURE_COMMAND ./bootstrap.sh
-	BUILD_COMMAND ./b2 headers && ./b2 --with-system --with-date_time --with-filesystem stage
+	BUILD_COMMAND ./b2
+
+	# BUILD_COMMAND ./b2 headers && ./b2 --with-system --with-date_time --with-filesystem stage
 	BUILD_IN_SOURCE 1
 )
 

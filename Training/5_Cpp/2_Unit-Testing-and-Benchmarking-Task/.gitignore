@@ -1,0 +1,9 @@
+/build/*
+!/build/benchmark
+!/build/unittest
+!/build/main
+!/build/main.exe
+/build/benchmark/*
+/build/unittest/*
+!/build/unittest/unittest_exe
+!/build/benchmark/benchmark_exe
