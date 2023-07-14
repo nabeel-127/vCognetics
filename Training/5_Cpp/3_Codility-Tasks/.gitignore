@@ -1,0 +1,5 @@
+/build/*
+!/build/BinaryGap
+!/build/CyclicRotation
+!/build/OddOccurrencesInArray
+!/build/FrogJmp
