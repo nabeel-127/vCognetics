@@ -9,3 +9,6 @@ Static:
 	g++ -c mymath.cpp -o mymath.o
 	ar rvs libmymath.a mymath.o OR g++ -static -o libmymath.a mymath.o
 	g++ main.cpp -o main -L. -lmymath
+
+Debug:
+g++ -c -g mymath.cpp -o mymath.o
