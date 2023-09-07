@@ -13,3 +13,6 @@ add_executable(TapeEquilibrium Lesson-3_Time-Complexity/TapeEquilibrium.cpp)
 add_executable(FrogRiverOne Lesson-4_Counting-Elements/FrogRiverOne.cpp)
 add_executable(PermCheck Lesson-4_Counting-Elements/PermCheck.cpp)
 add_executable(MaxCounters Lesson-4_Counting-Elements/MaxCounters.cpp)
+add_executable(MissingInteger Lesson-4_Counting-Elements/MissingInteger.cpp)
+
+add_executable(PassingCars Lesson-5_Prefix-Sums/PassingCars.cpp)
