@@ -1,0 +1,10 @@
+
+
+SYSTEM USAGE REPORT
+-------------------
+CPU usage: 5.2%
+Memory usage: 29.50%
+Disk usage: 4%
+Network statistics:
+    RX bytes: 
+    TX bytes: 

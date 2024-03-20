@@ -1,0 +1,17 @@
+version: '3'
+services:
+  build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    command: sh -c 'echo "Build service"'
+  run:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    command: sh -c 'g++ -o DummyTask main.cpp && ./DummyTask'
+

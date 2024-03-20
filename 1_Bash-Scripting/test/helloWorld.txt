@@ -1,0 +1,47 @@
+1Hello WOrld
+2hello world x2
+3hellow world x3
+4Pushing Text To File
+5\n\nPushing Text To File
+6asdadsa
+7asdasdasgrt
+8g
+9slfdksg
+10dfkhkkhfg
+11lwef
+12grkeg
+13rtgtkhrk
+14rh
+whoami: Shows the username of the current user.
+id: Shows the user and group ID of the current user.
+uname: Shows the name and details about the operating system.
+cp: Copies files or directories from one location to another.
+ps: Shows the current running processes in the system.
+top: Shows real-time information about the running processes and system resource usage.
+df: Shows the amount of disk space used and available on the system's file systems.
+man: Shows the manual page for a given command.
+date: Displays the current date and time.
+cp: Copies files or directories from one location to another.
+mv: Renames or moves files or directories.
+rm: Deletes files or directories.
+touch: Creates a new file or updates the modification time of an existing file.
+chmod: Changes the permissions of files or directories.
+wc: Counts the number of lines, words, and characters in a file or output.
+grep: Searches for a given pattern in files or output.
+ls: Lists the files and directories in the current directory.
+find: Searches for files or directories that match certain criteria.
+pwd: Displays the current working directory.
+rmdir: Removes an empty directory.
+cat: Displays the contents of a file.
+less: Displays the contents of a file in a scrollable manner.
+more: Displays the contents of a file one screenful at a time.
+head: Displays the first few lines of a file.
+tail: Displays the last few lines of a file.
+echo: Displays a message or value.
+tar: Creates or extracts tar archives.
+zip: Creates or extracts zip archives.
+hostname: Displays the name of the current host.
+ping: Tests the network connection to a host by sending packets and measuring the response time.
+ifconfig: Shows the network interface configuration.
+curl: Downloads data from a URL using various protocols.
+wget: Downloads files from the internet.

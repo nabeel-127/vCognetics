@@ -1,0 +1,17 @@
+# Clone and build.
+mkdir build
+cd build
+cmake ..
+make
+
+# Run the docker image that was just built.
+docker run --rm cmake-docker-example
+
+# Run make again. Nothing should be rebuilt.
+make
+
+# Touch the main.c file, then run make again.
+# Notice how both the executable and the dockerfile
+# are rebuilt.
+touch ../main.c
+make

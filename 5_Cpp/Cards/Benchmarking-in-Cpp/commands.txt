@@ -1,0 +1,9 @@
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
+
+complete submodule removal
+git submodule deinit -f external/benchmark
+git rm -rf external/benchmark
+rm -rf .git/modules/external/benchmark

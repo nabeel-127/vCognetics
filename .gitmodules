@@ -1,0 +1,9 @@
+[submodule "Training/5_Cpp/1_GCC-and-Cmake-tasks/2_CMake-Tasks/Task-2/external/boost"]
+	path = Training/5_Cpp/1_GCC-and-Cmake-tasks/2_CMake-Tasks/Task-2/external/boost
+	url = https://github.com/boostorg/boost.git
+[submodule "Training/5_Cpp/Cards/Unit-Testing-in-Cpp/external/googletest"]
+	path = Training/5_Cpp/Cards/Unit-Testing-in-Cpp/external/googletest
+	url = https://github.com/google/googletest.git
+[submodule "Training/5_Cpp/Cards/Benchmarking-in-Cpp/external/benchmark"]
+	path = Training/5_Cpp/Cards/Benchmarking-in-Cpp/external/benchmark
+	url = https://github.com/google/benchmark.git

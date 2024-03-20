@@ -1,0 +1,3 @@
+g++ -Wall -g -pedantic -shared -std=c++11 DynoLib.cpp -o libdyno.so
+objdump --syms libdyno.so
+g++ -Wall -g -pedantic -L. -ldyno DynoLib_main.cpp -o dyno_main
